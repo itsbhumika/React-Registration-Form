@@ -1,0 +1,101 @@
+.success-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fef6f8;
+  padding: 40px 16px;
+  font-family: 'Inter', sans-serif;
+  border-radius: 20px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+
+.success-card {
+  background: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  width: 100%;
+  animation: fadeIn 0.4s ease-in;
+  overflow-x: auto;
+}
+
+.success-card h2 {
+  color: #f48b94;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-list li {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1e1d6;
+  font-size: 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.field-name {
+  font-weight: 600;
+  color: #f48b94;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 120px;
+}
+
+.field-value {
+  color: #333;
+  white-space: nowrap;
+  overflow-x: auto;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+/* Scrollbar styling for long values */
+.details-list li::-webkit-scrollbar {
+  height: 6px;
+}
+.details-list li::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.no-data {
+  text-align: center;
+  margin-top: 100px;
+  color: #999;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .success-card {
+    padding: 1.5rem 1.25rem;
+    max-width: 95vw;
+  }
+
+  .field-name {
+    min-width: 100px;
+  }
+}
